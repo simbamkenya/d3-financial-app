@@ -23,8 +23,9 @@ function Candle(props) {
             x2={x}
             y2={wick_top}
             stroke={'red'}
-            strokeWidth={3}
+            strokeWidth={1.5}
             transform ={`translate(${bar_width/2})`}
+            
         />
         <line 
             x1={x}
@@ -32,7 +33,7 @@ function Candle(props) {
             x2={x}
             y2={wick_bottom}
             stroke={'green'}
-            strokeWidth={3}
+            strokeWidth={1.5}
             transform={`translate(${bar_width/2})`}
         />
          <rect 
@@ -40,6 +41,8 @@ function Candle(props) {
             y ={bar_top}
             width = {bar_width} 
             height = {bar_height}
+            strokeLinejoin={"round"}
+            style={{fill: up ? 'red': 'black'}}
         />
     </>
   )
